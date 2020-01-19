@@ -5,8 +5,12 @@ from utils import clear, header
 def main():
     clear()
     header()
-    AuthBankAccountConsole.is_auth()
-    #CacheMachineConsole.call_operation()
+    if AuthBankAccountConsole.is_auth():
+        clear()
+        header()
+        CacheMachineConsole.call_operation()
+    else:
+        print('Conta inválida!')
 
 
 if __name__ == '__main__':
